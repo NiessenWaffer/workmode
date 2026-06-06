@@ -1,6 +1,8 @@
 # WorkMode Enterprise Laravel AI Assistant
 
-WorkMode is a global prompt and slash-command pack for CLI AI tools. It is designed for Laravel 7 enterprise systems where the assistant must understand architecture, avoid unsafe edits, prefer maintainable framework-native code, and help developers debug legacy systems safely.
+WorkMode is a global prompt and slash-command pack for CLI AI tools. It is designed for Omnibus, the company's legacy Laravel 7 enterprise system, where the assistant must understand architecture, avoid unsafe edits, prefer maintainable framework-native code, and help developers debug old code safely.
+
+Omnibus has critical business data, large database dependencies, old developer patterns, and a structure that must be read carefully before changes. WorkMode exists to make AI assistance cautious: read the existing order first, follow company coding standards, avoid casual framework upgrades, and protect the database.
 
 WorkMode exposes only three work commands: analyze, debug, and develop. Review and mapping behavior is included inside those modes.
 
@@ -13,6 +15,7 @@ WorkMode exposes only three work commands: analyze, debug, and develop. Review a
 - Shared WorkMode prompts in `~/.config/workmode/`
 - Shared WorkMode tools in `~/.config/workmode/tools/`
 - Shared standards docs in `~/.config/workmode/docs/`
+- Shared project knowledge in `~/.config/workmode/knowledge/`
 
 After installation, the commands are available from any project. The target project does not need to contain this repository.
 
@@ -129,6 +132,7 @@ node ~/.config/workmode/tools/MAP.mjs .
 node ~/.config/workmode/tools/SIG.mjs app/Http/Controllers/UserController.php
 node ~/.config/workmode/tools/LEXICON.mjs user ~/.config/workmode/DOMAIN_DICTIONARY.md
 node ~/.config/workmode/tools/MATURITY.mjs .
+node ~/.config/workmode/tools/PROFILE.mjs . ~/.config/workmode/knowledge/omnibus-profile.json
 ```
 
 On Windows PowerShell:
@@ -140,11 +144,14 @@ node "$env:USERPROFILE\.config\workmode\tools\MAP.mjs" .
 ## Operating Rules
 
 - Analyze before editing.
+- Read routes, controllers, services, models, migrations, and Vue callers in order before changing code.
 - Do not hallucinate missing files.
 - Do not mutate databases without explicit permission.
+- Do not suggest Laravel or dependency upgrades as the default fix.
 - Prefer Laravel-native architecture: Form Requests, Services, Eloquent, Policies, Resources, Events, Jobs.
 - Prefer reusable service functions over duplicated logic.
 - Use raw SQL only when justified by performance, reporting, or query shape.
+- Follow `standard_coding.md` and existing company patterns.
 - Report changed files, risks, and verification after edits.
 - Review and architecture mapping are built into the three modes, not separate commands.
 
@@ -156,6 +163,8 @@ node "$env:USERPROFILE\.config\workmode\tools\MAP.mjs" .
 - [Guardrails And ORM Policy](docs/guardrails-and-orm.md)
 - [Developer Mode Standards](docs/developer-mode-standards.md)
 - [MVP Architecture](docs/mvp-architecture.md)
+- [Omnibus Structure Profile](knowledge/omnibus-structure.md)
+- [Omnibus Generated Profile](knowledge/omnibus-profile.json)
 
 ## Repository Structure
 

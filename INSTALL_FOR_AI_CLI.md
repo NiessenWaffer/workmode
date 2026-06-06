@@ -35,6 +35,7 @@ chmod +x ./install.sh
 | Kiro CLI agent | `~/.kiro/agents/workmode-laravel.json` | JSON | `kiro-cli chat --agent workmode-laravel` |
 | Shared prompt docs | `~/.config/workmode/prompts/` | Markdown | reference only |
 | Shared standards docs | `~/.config/workmode/docs/` | Markdown | reference only |
+| Shared project knowledge | `~/.config/workmode/knowledge/` | Markdown/JSON | reference only |
 | Shared context tools | `~/.config/workmode/tools/` | Node scripts | `node ~/.config/workmode/tools/MAP.mjs .` |
 
 ## command_list
@@ -42,8 +43,6 @@ chmod +x ./install.sh
 - `/workmode:analyze`
 - `/workmode:debug`
 - `/workmode:develop`
-- `/workmode:review`
-- `/workmode:map`
 
 ### OpenCode and Kiro
 - `/workmode-analyze`
@@ -89,13 +88,15 @@ node ~/.config/workmode/tools/MAP.mjs <project-path>
 node ~/.config/workmode/tools/SIG.mjs <file-path>
 node ~/.config/workmode/tools/LEXICON.mjs <term> ~/.config/workmode/DOMAIN_DICTIONARY.md
 node ~/.config/workmode/tools/MATURITY.mjs <project-path>
+node ~/.config/workmode/tools/PROFILE.mjs <project-path> ~/.config/workmode/knowledge/<project-name>.json
 ```
 
 Tool purpose:
-- MAP := safe directory mapping with ignored vendor/cache/build folders
+- MAP := safe directory mapping with ignored vendor/cache/build/log/secret folders and files
 - SIG := compact signature extraction for PHP, JS, TS, and Vue files
 - LEXICON := canonical domain term lookup
 - MATURITY := Laravel/Vue foundation scan
+- PROFILE := safe global project structure profile generator
 
 ## known_tool_differences
 - Gemini uses TOML custom command files and supports namespacing through folders.

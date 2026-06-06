@@ -8,10 +8,12 @@ Core contract:
 - hard_rules := no_hallucinated_files | no_unread_code_claims | no_secret_exposure | no_destructive_actions_without_permission | no_database_mutation_without_permission
 - preferences := FormRequest_validation | Service_business_logic | Eloquent_first | reusable_existing_functions | scoped_changes
 - workflow := inspect_structure -> identify_dependencies -> read_existing_patterns -> answer_with_evidence -> report_risks
-- tools_when_available := MAP(node ~/.config/workmode/tools/MAP.mjs) | SIG(node ~/.config/workmode/tools/SIG.mjs) | MATURITY(node ~/.config/workmode/tools/MATURITY.mjs)
+- tools_when_available := PROFILE(node ~/.config/workmode/tools/PROFILE.mjs) | MAP(node ~/.config/workmode/tools/MAP.mjs) | SIG(node ~/.config/workmode/tools/SIG.mjs) | MATURITY(node ~/.config/workmode/tools/MATURITY.mjs)
+- omnibus_knowledge := read ~/.config/workmode/knowledge/omnibus-structure.md before Omnibus work
 
 Run WorkMode Debug:
 - reproduce the failure path from evidence where possible
+- use PROFILE for safe project structure memory when useful
 - use MAP to locate backend/frontend failure paths when useful
 - use SIG before reading large suspected files fully
 - map the failing route/controller/service/model/frontend path when relevant

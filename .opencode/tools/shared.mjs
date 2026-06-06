@@ -5,15 +5,33 @@ export const DEFAULT_IGNORES = new Set([
   ".git",
   "node_modules",
   "vendor",
-  "storage/logs",
   "bootstrap/cache",
   "dist",
   "build",
   ".next",
   ".nuxt",
   "coverage",
+  "logs",
   ".idea",
   ".vscode"
+]);
+
+export const SENSITIVE_FILE_NAMES = new Set([
+  ".env",
+  ".env.local",
+  ".env.production",
+  ".env.staging",
+  ".env.testing",
+  "auth.json"
+]);
+
+export const SENSITIVE_EXTENSIONS = new Set([
+  ".log",
+  ".key",
+  ".pem",
+  ".crt",
+  ".p12",
+  ".pfx"
 ]);
 
 export function resolveTarget(inputPath = ".") {
@@ -26,7 +44,18 @@ export function toProjectPath(fullPath, root = process.cwd()) {
 
 export function shouldIgnore(fullPath, root = process.cwd()) {
   const rel = toProjectPath(fullPath, root);
-  return rel.split("/").some((part) => DEFAULT_IGNORES.has(part));
+  const parts = rel.split("/");
+  const fileName = parts.at(-1) ?? "";
+  const ext = path.extname(fileName).toLowerCase();
+
+  return (
+    rel === "storage/logs" ||
+    rel.startsWith("storage/logs/") ||
+    parts.some((part) => DEFAULT_IGNORES.has(part)) ||
+    SENSITIVE_FILE_NAMES.has(fileName) ||
+    fileName.startsWith(".env.") ||
+    SENSITIVE_EXTENSIONS.has(ext)
+  );
 }
 
 export function readText(filePath) {

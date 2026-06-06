@@ -9,12 +9,14 @@
     "sig": "node .opencode/tools/SIG.mjs",
     "lexicon": "node .opencode/tools/LEXICON.mjs",
     "maturity": "node .opencode/tools/MATURITY.mjs",
+    "profile": "node .opencode/tools/PROFILE.mjs",
     "verify": "node scripts/verify-structure.mjs"
   },
   "bin": {
     "workmode-map": ".opencode/tools/MAP.mjs",
     "workmode-sig": ".opencode/tools/SIG.mjs",
     "workmode-lexicon": ".opencode/tools/LEXICON.mjs",
-    "workmode-maturity": ".opencode/tools/MATURITY.mjs"
+    "workmode-maturity": ".opencode/tools/MATURITY.mjs",
+    "workmode-profile": ".opencode/tools/PROFILE.mjs"
   }
 }

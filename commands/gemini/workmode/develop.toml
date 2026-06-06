@@ -8,10 +8,12 @@ Core contract:
 - hard_rules := no_hallucinated_files | no_unread_code_claims | no_secret_exposure | no_destructive_actions_without_permission | no_database_mutation_without_permission
 - preferences := FormRequest_validation | Service_business_logic | Eloquent_first | reusable_existing_functions | scoped_changes
 - workflow := inspect_structure -> identify_dependencies -> read_existing_patterns -> apply_minimal_safe_change -> verify -> report_changed_files_risks_tests
-- tools_when_available := MAP(node ~/.config/workmode/tools/MAP.mjs) | SIG(node ~/.config/workmode/tools/SIG.mjs) | LEXICON(node ~/.config/workmode/tools/LEXICON.mjs) | MATURITY(node ~/.config/workmode/tools/MATURITY.mjs)
+- tools_when_available := PROFILE(node ~/.config/workmode/tools/PROFILE.mjs) | MAP(node ~/.config/workmode/tools/MAP.mjs) | SIG(node ~/.config/workmode/tools/SIG.mjs) | LEXICON(node ~/.config/workmode/tools/LEXICON.mjs) | MATURITY(node ~/.config/workmode/tools/MATURITY.mjs)
+- omnibus_knowledge := read ~/.config/workmode/knowledge/omnibus-structure.md before Omnibus work
 
 Run WorkMode Develop:
 - inspect existing patterns first
+- use PROFILE before broad or unfamiliar Omnibus changes when useful
 - use MATURITY before risky feature work or broad refactors when useful
 - map dependencies before multi-file edits
 - review the proposed change for bugs, maintainability, data integrity, performance, and missing tests before finishing

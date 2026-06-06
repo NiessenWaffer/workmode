@@ -1,0 +1,312 @@
+{
+  "tool": "PROFILE",
+  "root": "C:\\Users\\Niessen\\Desktop\\workMode\\omnibus\\omnibus",
+  "generatedAt": "2026-06-06T10:23:40.536Z",
+  "maxFiles": 20000,
+  "truncated": false,
+  "project": {
+    "detected": {
+      "laravel": true,
+      "vue": true,
+      "migrations": true
+    },
+    "php": "^7.2.5",
+    "laravel": "^7.0",
+    "vue": "^2.6.12",
+    "frontendBuild": "^5.0.9"
+  },
+  "counts": {
+    "safeFilesScanned": 5271,
+    "phpFiles": 1388,
+    "vueFiles": 1360,
+    "jsFiles": 391,
+    "migrations": 119,
+    "controllers": 352,
+    "requests": 41,
+    "middleware": 9,
+    "consoleCommands": 101,
+    "tests": 2
+  },
+  "entryPoints": {
+    "routes": [
+      {
+        "path": "routes/web.php",
+        "bytes": 9381
+      },
+      {
+        "path": "routes/api.php",
+        "bytes": 396412
+      },
+      {
+        "path": "routes/console.php",
+        "bytes": 612
+      },
+      {
+        "path": "routes/channels.php",
+        "bytes": 569
+      }
+    ],
+    "frontend": [
+      {
+        "path": "resources/js/app.js",
+        "bytes": 2049
+      },
+      {
+        "path": "resources/js/router.js",
+        "bytes": 87378
+      },
+      {
+        "path": "resources/js/store.js",
+        "bytes": 2321
+      },
+      {
+        "path": "resources/js/App.vue",
+        "bytes": 1347
+      }
+    ],
+    "laravel": [
+      {
+        "path": "app/Console/Kernel.php",
+        "bytes": 23242
+      },
+      {
+        "path": "app/Exceptions/Handler.php",
+        "bytes": 1196
+      },
+      {
+        "path": "app/helpers.php",
+        "bytes": 7044
+      }
+    ]
+  },
+  "modules": {
+    "app": [
+      "app/Classes",
+      "app/Console",
+      "app/Exceptions",
+      "app/Extensions",
+      "app/Helpers",
+      "app/Http",
+      "app/Jobs",
+      "app/Mail",
+      "app/ModelStates",
+      "app/Models",
+      "app/Processors",
+      "app/Providers",
+      "app/Services"
+    ],
+    "controllers": [
+      "app/Http/Controllers/About",
+      "app/Http/Controllers/Approval",
+      "app/Http/Controllers/Auth",
+      "app/Http/Controllers/AutomationTools",
+      "app/Http/Controllers/BankSoa",
+      "app/Http/Controllers/Bulletin",
+      "app/Http/Controllers/Core",
+      "app/Http/Controllers/Directory",
+      "app/Http/Controllers/Documentation",
+      "app/Http/Controllers/Email",
+      "app/Http/Controllers/FixedAssets",
+      "app/Http/Controllers/Home",
+      "app/Http/Controllers/ITTools",
+      "app/Http/Controllers/ImageStorage",
+      "app/Http/Controllers/Inquiry",
+      "app/Http/Controllers/Loyalty",
+      "app/Http/Controllers/MITools",
+      "app/Http/Controllers/Pricetag",
+      "app/Http/Controllers/ProcessAutomation",
+      "app/Http/Controllers/Product",
+      "app/Http/Controllers/Quotation",
+      "app/Http/Controllers/Reports",
+      "app/Http/Controllers/SalesForceMonitoring",
+      "app/Http/Controllers/ScheduledJobs",
+      "app/Http/Controllers/Store",
+      "app/Http/Controllers/TradeConsignment",
+      "app/Http/Controllers/Warehouse"
+    ],
+    "consoleCommands": [
+      "app/Console/Commands/AutoIncentivesComputation",
+      "app/Console/Commands/BankRecon",
+      "app/Console/Commands/ESOA",
+      "app/Console/Commands/ETPAllPromotions",
+      "app/Console/Commands/EWT2307Validation",
+      "app/Console/Commands/ExpirationPricelist",
+      "app/Console/Commands/Finance",
+      "app/Console/Commands/Marketing",
+      "app/Console/Commands/NonPOManpowerSecurity",
+      "app/Console/Commands/PO",
+      "app/Console/Commands/PriceListAndPriceAdjustment",
+      "app/Console/Commands/Pricetag",
+      "app/Console/Commands/ProcessAutomation",
+      "app/Console/Commands/ProductAttribute",
+      "app/Console/Commands/Purchasing",
+      "app/Console/Commands/TopsBackup"
+    ],
+    "extensions": [
+      "app/Extensions/CustomersApi",
+      "app/Extensions/LoyaltyApi",
+      "app/Extensions/M3",
+      "app/Extensions/NonTradeROandWithdrawalAPI",
+      "app/Extensions/NontradeAdvancePayment",
+      "app/Extensions/Paperless",
+      "app/Extensions/PaymentProposal",
+      "app/Extensions/Pentaho",
+      "app/Extensions/ProformaInvoice",
+      "app/Extensions/ProjectPrdo",
+      "app/Extensions/Sms",
+      "app/Extensions/StockRequest"
+    ],
+    "resources": [
+      "resources/backups",
+      "resources/images",
+      "resources/js",
+      "resources/lang",
+      "resources/sass",
+      "resources/views"
+    ],
+    "frontendViews": [
+      "resources/js/views/About",
+      "resources/js/views/Admin",
+      "resources/js/views/Approval",
+      "resources/js/views/BankSOA",
+      "resources/js/views/Bulletin",
+      "resources/js/views/Directory",
+      "resources/js/views/Documentation",
+      "resources/js/views/Home",
+      "resources/js/views/ITTools",
+      "resources/js/views/ImageStorage",
+      "resources/js/views/Inquiry",
+      "resources/js/views/Loyalty",
+      "resources/js/views/MITools",
+      "resources/js/views/PrintingTools",
+      "resources/js/views/ProcessAutomation",
+      "resources/js/views/Products",
+      "resources/js/views/Reports",
+      "resources/js/views/Store",
+      "resources/js/views/Warehouse"
+    ],
+    "frontendComponents": [
+      "resources/js/components/Charts",
+      "resources/js/components/CoDashboard",
+      "resources/js/components/CustomUI",
+      "resources/js/components/ItemSearch",
+      "resources/js/components/PettyCash",
+      "resources/js/components/VueExcelEditor",
+      "resources/js/components/json"
+    ]
+  },
+  "dependencies": {
+    "composerRequire": [
+      "aferrandini/phpqrcode",
+      "barryvdh/laravel-dompdf",
+      "brotzka/laravel-dotenv-editor",
+      "cloudconvert/cloudconvert-php",
+      "cocur/slugify",
+      "cooperl/laravel-db2",
+      "dbt/odbc-driver",
+      "doctrine/dbal",
+      "fideloper/proxy",
+      "fruitcake/laravel-cors",
+      "gnumoksha/php-freeipa",
+      "guzzlehttp/guzzle",
+      "http-interop/http-factory-guzzle",
+      "illuminated/console-mutex",
+      "itsgoingd/clockwork",
+      "iwasherefirst2/laravel-multimail",
+      "ixudra/curl",
+      "kalnoy/nestedset",
+      "laravel/framework",
+      "laravel/tinker",
+      "laravel/ui",
+      "league/flysystem-sftp",
+      "mpdf/mpdf",
+      "mtownsend/xml-to-array",
+      "ncjoes/office-converter",
+      "owen-it/laravel-auditing",
+      "php",
+      "phpoffice/phpspreadsheet",
+      "phpoffice/phpword",
+      "picqer/php-barcode-generator",
+      "psr/simple-cache",
+      "setasign/fpdi-tcpdf",
+      "spatie/laravel-model-states",
+      "spatie/laravel-permission",
+      "spatie/pdf-to-image",
+      "spatie/pdf-to-text",
+      "sujan/php-csv-exporter",
+      "swiftmailer/swiftmailer"
+    ],
+    "composerRequireDev": [
+      "facade/ignition",
+      "fzaninotto/faker",
+      "laravel/telescope",
+      "mockery/mockery",
+      "nunomaduro/collision",
+      "phpunit/phpunit",
+      "vikdiesel/admin-one-laravel-dashboard"
+    ],
+    "npmDependencies": [
+      "@chenfengyuan/vue-barcode",
+      "@jspreadsheet/vue",
+      "@revolist/vue-datagrid",
+      "@tinymce/tinymce-vue",
+      "@zxing/library",
+      "clockwork-browser",
+      "exceljs",
+      "file-saver",
+      "json-query",
+      "lottie-vuejs",
+      "mathjs",
+      "object.pluck",
+      "paper-css",
+      "pdf-lib",
+      "philippines",
+      "qrcode",
+      "qs",
+      "read-excel-file",
+      "signature_pad",
+      "spark-md5",
+      "tinymce",
+      "vue-barcode",
+      "vue-barcode-reader",
+      "vue-bulma-chartjs",
+      "vue-excel-editor",
+      "vue-html-to-paper",
+      "vue-json-pretty",
+      "vue-multiselect-listbox",
+      "vue-pdf",
+      "vue-product-zoomer",
+      "vue-qrcode-component",
+      "vue-web-cam",
+      "vue-wysiwyg",
+      "xlsx"
+    ],
+    "npmDevDependencies": [
+      "@mdi/font",
+      "@types/debounce",
+      "axios",
+      "buefy",
+      "bulma",
+      "cross-env",
+      "laravel-mix",
+      "laravel-mix-alias",
+      "lodash",
+      "moment",
+      "numeral",
+      "resolve-url-loader",
+      "sass",
+      "sass-loader",
+      "script-loader",
+      "vue",
+      "vue-friendly-iframe",
+      "vue-router",
+      "vue-template-compiler",
+      "vuex"
+    ]
+  },
+  "safetyNotes": [
+    "Profile excludes ignored dependency folders, logs, env files, keys, and certificates.",
+    "Use this profile as a navigation map only; inspect exact files before proposing edits.",
+    "For Omnibus, read routes, controllers, services/extensions, models, migrations, and Vue callers in order."
+  ]
+}

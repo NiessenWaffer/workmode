@@ -19,6 +19,7 @@ function Copy-Tree($Source, $Destination) {
 New-Item -ItemType Directory -Force -Path $WorkModeRoot | Out-Null
 Copy-Tree (Join-Path $RepoRoot "prompts") (Join-Path $WorkModeRoot "prompts")
 Copy-Tree (Join-Path $RepoRoot "docs") (Join-Path $WorkModeRoot "docs")
+Copy-Tree (Join-Path $RepoRoot "knowledge") (Join-Path $WorkModeRoot "knowledge")
 Copy-Tree (Join-Path $RepoRoot ".opencode\tools") (Join-Path $WorkModeRoot "tools")
 Copy-Item -Path (Join-Path $RepoRoot "standard_coding.md") -Destination (Join-Path $WorkModeRoot "standard_coding.md") -Force
 Copy-Item -Path (Join-Path $RepoRoot "DOMAIN_DICTIONARY.md") -Destination (Join-Path $WorkModeRoot "DOMAIN_DICTIONARY.md") -Force
@@ -48,3 +49,4 @@ Write-Host "OpenCode: /workmode-analyze /workmode-debug /workmode-develop"
 Write-Host "Kiro:     /workmode-analyze /workmode-debug /workmode-develop"
 Write-Host "Kiro agent: kiro-cli chat --agent workmode-laravel"
 Write-Host "Tools:    node ~/.config/workmode/tools/MAP.mjs <project-path>"
+Write-Host "Profile:  node ~/.config/workmode/tools/PROFILE.mjs <project-path> ~/.config/workmode/knowledge/<name>.json"

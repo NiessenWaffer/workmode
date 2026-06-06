@@ -7,6 +7,8 @@ Task: Implement or modify code safely.
 Input: `$ARGUMENTS`
 
 Required behavior:
+- read `~/.config/workmode/knowledge/omnibus-structure.md` first when the target is Omnibus
+- use PROFILE before broad or unfamiliar Omnibus changes when available
 - use MAP before broad or multi-file edits when available
 - use SIG before editing large files when available
 - use MATURITY before risky feature work when available

@@ -17,6 +17,7 @@ copy_tree() {
 
 copy_tree "${REPO_ROOT}/prompts" "${WORKMODE_ROOT}/prompts"
 copy_tree "${REPO_ROOT}/docs" "${WORKMODE_ROOT}/docs"
+copy_tree "${REPO_ROOT}/knowledge" "${WORKMODE_ROOT}/knowledge"
 copy_tree "${REPO_ROOT}/.opencode/tools" "${WORKMODE_ROOT}/tools"
 cp "${REPO_ROOT}/standard_coding.md" "${WORKMODE_ROOT}/standard_coding.md"
 cp "${REPO_ROOT}/DOMAIN_DICTIONARY.md" "${WORKMODE_ROOT}/DOMAIN_DICTIONARY.md"
@@ -34,3 +35,4 @@ echo "OpenCode: /workmode-analyze /workmode-debug /workmode-develop"
 echo "Kiro:     /workmode-analyze /workmode-debug /workmode-develop"
 echo "Kiro agent: kiro-cli chat --agent workmode-laravel"
 echo "Tools:    node ~/.config/workmode/tools/MAP.mjs <project-path>"
+echo "Profile:  node ~/.config/workmode/tools/PROFILE.mjs <project-path> ~/.config/workmode/knowledge/<name>.json"

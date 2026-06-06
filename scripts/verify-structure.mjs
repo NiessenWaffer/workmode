@@ -17,6 +17,8 @@ const required = [
   "docs/guardrails-and-orm.md",
   "docs/developer-mode-standards.md",
   "docs/mvp-architecture.md",
+  "knowledge/omnibus-structure.md",
+  "knowledge/omnibus-profile.json",
   "prompts/core/enterprise-laravel-assistant.md",
   "prompts/commands/analyze.md",
   "prompts/commands/debug.md",
@@ -34,7 +36,8 @@ const required = [
   ".opencode/tools/MAP.mjs",
   ".opencode/tools/SIG.mjs",
   ".opencode/tools/LEXICON.mjs",
-  ".opencode/tools/MATURITY.mjs"
+  ".opencode/tools/MATURITY.mjs",
+  ".opencode/tools/PROFILE.mjs"
 ];
 
 const missing = required.filter((file) => !fs.existsSync(path.join(root, file)));
