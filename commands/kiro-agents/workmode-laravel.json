@@ -1,0 +1,9 @@
+{
+  "name": "workmode-laravel",
+  "description": "Enterprise Laravel 7 assistant for safe analysis, debugging, development, review, and architecture mapping.",
+  "resources": [
+    "skill://~/.kiro/skills/workmode-analyze/SKILL.md",
+    "skill://~/.kiro/skills/workmode-debug/SKILL.md",
+    "skill://~/.kiro/skills/workmode-develop/SKILL.md"
+  ]
+}

@@ -1,0 +1,20 @@
+{
+  "name": "workmode-enterprise-laravel-ai",
+  "version": "0.1.0",
+  "private": true,
+  "type": "module",
+  "description": "Global CLI AI command pack and context tools for Laravel 7 enterprise development.",
+  "scripts": {
+    "map": "node .opencode/tools/MAP.mjs",
+    "sig": "node .opencode/tools/SIG.mjs",
+    "lexicon": "node .opencode/tools/LEXICON.mjs",
+    "maturity": "node .opencode/tools/MATURITY.mjs",
+    "verify": "node scripts/verify-structure.mjs"
+  },
+  "bin": {
+    "workmode-map": ".opencode/tools/MAP.mjs",
+    "workmode-sig": ".opencode/tools/SIG.mjs",
+    "workmode-lexicon": ".opencode/tools/LEXICON.mjs",
+    "workmode-maturity": ".opencode/tools/MATURITY.mjs"
+  }
+}
